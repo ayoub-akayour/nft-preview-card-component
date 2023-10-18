@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@300;400;600&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: Outfit;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: hsl(216, 50%, 16%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  row-gap: 1rem;
+  width: 25vw;
+  border-radius: 15px;
+  height: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;;
+}
+
+.nft-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-container {
+  flex: 1;
+  position: absolute;
+  background: hsla(178, 100%, 50%, 0.404);
+  border-radius: 15px;
+  width: 100%;
+  box-sizing: content-box;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.hover-container svg {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.hover-container:hover {
+  opacity: 1;
+}
+
+a > img {
+  width: 100%;
+  box-sizing: content-box;
+  border-radius: 15px;
+}
+
+.nft-description {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.nft-description h1 {
+  font-size: 1.3rem;
+}
+a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  position: relative;
+}
+
+a:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+}
+
+.price-time-left-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price span {
+  color: hsl(178, 100%, 50%);
+}
+
+.time-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(215, 51%, 70%);
+}
+
+.line {
+  border: none;
+  border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.user {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user img {
+  width: 2.1rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23vw;
+    row-gap: 1.5rem;
+  }
+
+  .nft-description h1 {
+    font-size: 1.7rem;
+  }
+
+  .line {
+    border: none;
+    width: 100%;
+    border-top: 2px solid hsl(215, 32%, 27%);
+  }
+  .user {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1350px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28vw;
+    row-gap: 1.4rem;
+  }
+
+  .nft-description h1 {
+    font-size: 1.4rem;
+  }
+
+  .nft-description p {
+    font-size: 0.95rem;
+  }
+
+  .price-time-left-container span {
+    font-size: 0.95rem;
+  }
+
+  .line {
+    border: none;
+    width: 100%;
+    border-top: 1px solid hsl(215, 32%, 27%);
+  }
+  .user {
+    align-self: flex-start;
+    gap: 0.7rem;
+  }
+  .user p {
+    font-size: 0.9rem;
+  }
+  .user img {
+    width: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 40vw;
+  }
+  .nft-description h1 {
+    font-size: 1.4rem;
+  }
+
+  .nft-description p {
+    font-size: 0.9rem;
+  }
+  .price-time-left-container span {
+    font-size: 0.9rem;
+  }
+  .user p {
+    font-size: 0.9rem;
+  }
+  .user img {
+    width: 1.8rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: 80vw;
+  }
+  .nft-description h1 {
+    font-size: 1rem;
+  }
+
+  .nft-description p {
+    font-size: 0.7rem;
+  }
+  .price-time-left-container span {
+    font-size: 0.7rem;
+  }
+  .user p {
+    font-size: 0.7rem;
+  }
+  .user img {
+    width: 1.5rem;
+  }
+  .user a {
+    font-size: 0.7rem;
+  }
+}
